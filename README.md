@@ -48,6 +48,6 @@ El diseño relacional incluye 10 tablas interconectadas para garantizar la integ
 *   `docente`, `ciclo_academico`, `seccion`
 *   `estudiante`, `asignacion_materia`, `inscripcion`, `nota`
 
-*(Puedes consultar el archivo `documentacion_gestion_notas.md` para ver el Diagrama Entidad-Relación y detalles de cada tabla).*
+*(Consultando el archivo `documentacion_gestion_notas.md` para ver el Diagrama Entidad-Relación y detalles de cada tabla).*
 
 
