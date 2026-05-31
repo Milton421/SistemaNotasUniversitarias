@@ -124,6 +124,7 @@ namespace ProyectoF {
 			this->dgvEstudiantes->Size = System::Drawing::Size(750, 290);
 			this->dgvEstudiantes->TabIndex = 1;
 			this->dgvEstudiantes->DataBindingComplete += gcnew System::Windows::Forms::DataGridViewBindingCompleteEventHandler(this, &AlumnosForm::dgvEstudiantes_DataBindingComplete);
+			this->dgvEstudiantes->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &AlumnosForm::dgvEstudiantes_CellClick);
 			// 
 			// panelCardForm
 			// 
@@ -242,6 +243,7 @@ namespace ProyectoF {
 			this->btnObtener->Size = System::Drawing::Size(120, 35);
 			this->btnObtener->TabIndex = 2;
 			this->btnObtener->Text = L"Refrescar Tabla";
+			this->btnObtener->Click += gcnew System::EventHandler(this, &AlumnosForm::btnObtener_Click);
 			// 
 			// btnInsertar
 			// 
@@ -250,6 +252,7 @@ namespace ProyectoF {
 			this->btnInsertar->Size = System::Drawing::Size(120, 35);
 			this->btnInsertar->TabIndex = 3;
 			this->btnInsertar->Text = L"Insertar";
+			this->btnInsertar->Click += gcnew System::EventHandler(this, &AlumnosForm::btnInsertar_Click);
 			// 
 			// btnActualizar
 			// 
@@ -258,6 +261,7 @@ namespace ProyectoF {
 			this->btnActualizar->Size = System::Drawing::Size(120, 35);
 			this->btnActualizar->TabIndex = 4;
 			this->btnActualizar->Text = L"Actualizar";
+			this->btnActualizar->Click += gcnew System::EventHandler(this, &AlumnosForm::btnActualizar_Click);
 			// 
 			// btnEliminar
 			// 
@@ -266,6 +270,7 @@ namespace ProyectoF {
 			this->btnEliminar->Size = System::Drawing::Size(120, 35);
 			this->btnEliminar->TabIndex = 5;
 			this->btnEliminar->Text = L"Eliminar";
+			this->btnEliminar->Click += gcnew System::EventHandler(this, &AlumnosForm::btnEliminar_Click);
 			// 
 			// btnLimpiar
 			// 
@@ -274,6 +279,7 @@ namespace ProyectoF {
 			this->btnLimpiar->Size = System::Drawing::Size(120, 35);
 			this->btnLimpiar->TabIndex = 6;
 			this->btnLimpiar->Text = L"Limpiar";
+			this->btnLimpiar->Click += gcnew System::EventHandler(this, &AlumnosForm::btnLimpiar_Click);
 			// 
 			// label1
 			// 
