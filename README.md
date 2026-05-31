@@ -30,8 +30,8 @@ Este proyecto tiene como objetivo principal gestionar la estructura académica d
 
 ### 1. Base de Datos
 El proyecto incluye un script SQL con la estructura completa y datos de prueba.
-1. Abre tu gestor de base de datos MySQL (ej. MySQL Workbench, XAMPP, etc.).
-2. Ejecuta el archivo `gestion_notas_universidad.sql` incluido en el código fuente. Esto creará la base de datos `gestion_notas_universidad` y poblará las tablas con datos iniciales.
+1. Abriendo un gestor de base de datos MySQL (ej. MySQL Workbench, XAMPP, etc.).
+2. Ejecutando el archivo `gestion_notas_universidad.sql` incluido en el código fuente. Esto creará la base de datos `gestion_notas_universidad` y poblará las tablas con datos iniciales.
 
 ### 2. Configuración en Visual Studio
 1. Clona este repositorio:
@@ -50,5 +50,4 @@ El diseño relacional incluye 10 tablas interconectadas para garantizar la integ
 
 *(Puedes consultar el archivo `documentacion_gestion_notas.md` para ver el Diagrama Entidad-Relación y detalles de cada tabla).*
 
----
-**Desarrollado como Proyecto Final.**
+
