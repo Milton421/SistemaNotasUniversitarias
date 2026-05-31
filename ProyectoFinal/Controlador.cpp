@@ -503,12 +503,30 @@ bool CModelo::eliminarEstudiante(int id) {
 
     try {
 
+        // Eliminar notas asociadas a las inscripciones del estudiante
+        String^ sql1 = "DELETE FROM nota WHERE id_inscripcion IN (SELECT id_inscripcion FROM inscripcion WHERE id_estudiante = @id)";
+        MySqlCommand^ cmd1 = gcnew MySqlCommand(sql1);
+        cmd1->Parameters->AddWithValue("@id", id);
+        db->ejecutaIUD(cmd1);
+
+        // Eliminar inscripciones del estudiante
+        String^ sql2 = "DELETE FROM inscripcion WHERE id_estudiante = @id";
+        MySqlCommand^ cmd2 = gcnew MySqlCommand(sql2);
+        cmd2->Parameters->AddWithValue("@id", id);
+        db->ejecutaIUD(cmd2);
+
+        // Eliminar asignaciones de materia del estudiante
+        String^ sql3 = "DELETE FROM asignacion_materia WHERE id_estudiante = @id";
+        MySqlCommand^ cmd3 = gcnew MySqlCommand(sql3);
+        cmd3->Parameters->AddWithValue("@id", id);
+        db->ejecutaIUD(cmd3);
+
+        // Finalmente, eliminar el estudiante
         String^ sql =
             "DELETE FROM estudiante "
             "WHERE id_estudiante = @id";
 
         MySqlCommand^ cmd = gcnew MySqlCommand(sql);
-
         cmd->Parameters->AddWithValue("@id", id);
 
         return (db->ejecutaIUD(cmd) > 0);
